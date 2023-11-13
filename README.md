@@ -6,9 +6,11 @@ A Spring Boot application for weather monitoring, allowing users to register sen
 
 - [Description](#description)
 - [Requirements](#requirements)
-- [API Documentation](#api-documentation)
-- [Functionality](#functionality)
 - [Error processing](#Error-processing)
+- [API Documentation](#api-documentation)
+- [Build](#build)
+- [Error processing](#Error-processing)
+
 
 ## Description
 
@@ -26,13 +28,43 @@ The Weather Monitoring System is designed to track weather data from various sen
 
 ## API Documentation
 
-{server.ip}/swagger-ui/index.htm
+http://localhost:8080/swagger-ui/index.htm
+
+## Build
+
+0. Create a Postgres Database named "weather".
+
+1. Open a terminal or command line.
+   
+2. Go to the directory where you want to host the repository:
+   
+```bash
+cd /path/to/your/directory
+```
+
+3. Clone the repository:
+
+```bash
+git clone https://github.com/AShafalovich/WeatherApi.git
+```
+
+4. Build the project using Gradle:
+   
+```bash
+gradlew build
+```
+
+5. Launch the application:   
+
+```bash
+java -jar build/libs/Weather-1.0-SNAPSHOT.jar
+```
 
 ## Functionality
 
 1. Sensor registration:
    
-POST {server.ip}/sensors/registration
+POST http://localhost:8080/sensors/registration
 
 Request example:
 ```json
@@ -50,7 +82,7 @@ Response example:
 
 2. Sensor initialization:
    
-POST {server.ip}/sensors/{key}/measurements
+POST http://localhost:8080/sensors/{key}/measurements
 
 Response example:
 ```json
@@ -62,7 +94,7 @@ Response example:
 
 3. Request to receive all active sensors:
    
-GET {server.ip}/sensors
+GET http://localhost:8080/sensors
 
 Response example:
 ```json
@@ -80,7 +112,7 @@ Response example:
 
 4. Request to receive information about the last 20 sensor measurements:
    
-GET {server.ip}/sensors/{key}/measurements
+GET http://localhost:8080/sensors/{key}/measurements
 
 Response example:
 ```json
@@ -102,7 +134,7 @@ Response example:
 
 5. Request for up-to-date information from all sensors. Measurements whose time does not differ from request time for more than one minute.
 
-GET {server.ip}/sensors/measurements
+GET http://localhost:8080/sensors/measurements
 
 Response example:
 ```json
