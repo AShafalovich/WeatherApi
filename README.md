@@ -18,8 +18,11 @@ The Weather Monitoring System is designed to track weather data from various sen
 
 - Programming language: Java 17
 - Framework: Spring Boot
-- Database: PostgresSBL.
-- API documentation: Swagger.
+- Build: Gradle
+- Database: PostgresSQL
+- Database migration: Flyway
+- API documentation: Swagger
+- Others: OpenWeather API
 
 ## API Documentation
 
