@@ -6,7 +6,6 @@ A Spring Boot application for weather monitoring, allowing users to register sen
 
 - [Description](#description)
 - [Requirements](#requirements)
-- [Error processing](#Error-processing)
 - [API Documentation](#api-documentation)
 - [Build](#build)
 - [Error processing](#Error-processing)
