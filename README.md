@@ -7,8 +7,8 @@ A Spring Boot application for weather monitoring, allowing users to register sen
 - [Description](#description)
 - [Requirements](#requirements)
 - [API Documentation](#api-documentation)
-- [Functionality] (#functionality)
-- [Error processing] (#Error processing)
+- [Functionality](#functionality)
+- [Error processing](#Error processing)
 
 ## Description
 
@@ -29,6 +29,7 @@ The Weather Monitoring System is designed to track weather data from various sen
 
 1. Sensor registration:
 POST {server.ip}/sensors/registration
+
 Request example:
 ```json
 {
@@ -42,6 +43,7 @@ Response example:
 
 2. Sensor initialization:
 POST {server.ip}/sensors/{key}/measurements
+
 Response example:
 ```json
 {
@@ -52,6 +54,7 @@ Response example:
 
 3. Request to receive all active sensors:
 GET {server.ip}/sensors
+
 Response example:
 ```json
 {
@@ -68,6 +71,7 @@ Response example:
 
 4. Request to receive information about the last 20 sensor measurements:
 GET {server.ip}/sensors/{key}/measurements
+
 Response example:
 ```json
 {
@@ -88,6 +92,8 @@ Response example:
 
 5. Request for up-to-date information from all sensors. Measurements whose time does not differ from request time for more than one minute.
 GET {server.ip}/sensors/measurements
+
+Response example:
 ```json
 {
     "actualSensorMeasurements": [
@@ -143,6 +149,7 @@ GET {server.ip}/sensors/measurements
 ## Error processing
 
 The API processes and returns error messages when there is an invalid request or internal server problems.
+
 Some examples of error responses:
 ```json
 {
