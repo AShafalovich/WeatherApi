@@ -1,0 +1,18 @@
+spring:
+  flyway:
+    locations: classpath:database
+    table: user_flyway_schema_history
+    baseline-on-migrate: true
+    baseline-version: 0
+  jpa:
+    hibernate:
+      ddl-auto: none
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/weather
+    username: postgres
+    password: trh52921
+openWeather:
+  baseUrl: https://api.openweathermap.org/data/2.5/weather?q=
+  APPID: APPID=b80f798033ffbaa6cae7201989812c73
+  unitsMetric: units=metric
